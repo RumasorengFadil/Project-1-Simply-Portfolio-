@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #FEF4F4;
+    font-family: Poppins;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 400;
+}
+.nav{
+    height: 80px;
+    background-color: #2E2828;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.nav__dr-down{
+    position: fixed;
+    text-align: left;
+    top: 63px;
+    right: 20px;
+    opacity: 0;
+    background-color: #2E2828;
+    box-shadow: 3px 0 8px 1px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.nav__dr-down-item{
+    padding: 10px 20px;
+    font-weight:800;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+.nav__logo-cn{
+    font-size: 16px;
+    margin-left: 15px;
+    flex-grow: 1;  
+    text-decoration: none;
+}
+.nav__logo{
+  
+    text-decoration: none;
+}
+.logo__icn{
+    cursor: pointer;
+}
+.nav__burger-icn{
+    cursor: pointer;
+    position: absolute;
+    display: inline;
+    right: 15px;
+}
+.nav__x-icn{
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    z-index: 1;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+main{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.greet{
+    height: 586px;
+    background-color: #2E2828;
+}
+.greet__name{
+    font-size: 29px;
+    padding-top: 50px;
+}
+.greet__slogan{
+    font-family: Montserrat;
+    font-size: 12px;
+}
+.greet__logo{
+    margin-top: 100px;
+    width: 150px;
+}
+.card{
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card__cn{
+    flex-basis: 50%;
+    position: relative;
+}
+.card__judul{
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #2E2828;
+}
+.card__paragraf{
+    /* margin-top: 25px; */
+    width: 301px;
+    text-align-last: center;
+    display: inline-block;
+    font-family: Montserrat;
+    line-height: 150%;
+    font-size: 14px;
+    color: #2E2828;
+}
+.card__img-cn{
+    flex-basis: 50%;
+    background-color: #2E2828;
+    background-position: center;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.card__img{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.card__item{
+    list-style: none;
+    padding-bottom: 5px;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #2E2828;
+}
+.card__gambar{
+    width: 145px;
+    height: 159px;
+    margin-bottom: 25px;
+    border: 3px solid #F6C90E;
+}
+.footer{
+    height: 215px;
+    background-color: #2E2828;
+}
+.footer__judul{
+    padding: 6px 0 0 9px;
+}
+.footer__content{
+    display: flex;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+.footer__medsos{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-left: 9px;
+}
+.show{
+    opacity: 1;
+    transition: 150ms opacity;
+}
+.hidden{
+    visibility: hidden;
+}
+@media only screen and (min-width : 720px){
+    .nav--sticky{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+    }
+    .nav__dr-down{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        box-shadow: unset;
+        width: unset;
+        height: unset;
+    }
+    .nav__burger-icn{
+        display: none;
+    }
+    .nav__x-icn{
+        display: none;
+    }
+    .nav__dr-down-item{
+        display: inline-block;
+        margin: 0 20px 0 20px;
+        font-size: 16px;
+    }
+    .nav__logo-cn{
+        margin-left: 20px;
+        font-size: 24px;
+    }
+    .greet__name{
+        font-size: 48px;
+    }
+    .greet__slogan{
+        font-size: 20px;
+    }
+    .greet__logo{
+        margin-top: 50px;
+        width: 200px;
+    }
+    .greet{
+        height: 1024px;
+        background-size: 520px;
+        background-position-y: -50px;
+        margin-bottom: 80px;
+    }
+    .card{
+        height: 512px;
+        flex-direction: row-reverse;
+    }
+    .card__judul{
+        font-size: 39.1px;
+    }
+    .card__paragraf{
+        font-size: 16px;
+        width: 344px;
+    }
+    .card__img{
+        width: 300px;
+    }
+    .footer{
+        height: 474px;
+    }
+    .footer__judul{
+        padding-top: 117px;
+        margin-left: 48px;
+        font-size: 32px;
+    }
+    .footer__content{
+        margin-left: 48px;
+    }
+    .footer__medsos{
+        font-size: 16px;
+        cursor: pointer;
+    }   
+    .row{
+        flex-direction: row;
+    }
+}
